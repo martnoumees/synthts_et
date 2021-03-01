@@ -5,6 +5,8 @@
 #include <algorithm>
 #include "../lib/etana/proof.h"
 #include "../include/mklab.h"
+#include "../include/synthts_et.h"
+
 extern "C" {
 #include "../include/HTS_engine.h"
 }
@@ -142,208 +144,221 @@ void samplerate(size_t &fr, size_t &fp, float &alpha, size_t br) {
             alpha = 0.55;
 }
 
-int main(int argc, char* argv[]) {
-    size_t num_voices;
-    char **fn_voices;
-    char* in_fname;
-    char* output_fname;
-    FILE * outfp;
-    char* dur_fname;
-    FILE * durfp;    
-    bool print_label = false;
-    bool print_utt = false;
-    bool write_raw = false;
-    bool write_durlabel = false;
+extern "C" {
+    __declspec(dllexport) int main(int argc, char* argv[]) {
+        size_t num_voices;
+        char** fn_voices;
+        char* in_fname;
+        char* output_fname;
+        FILE* outfp;
+        char* dur_fname;
+        FILE* durfp;
+        bool print_label = false;
+        bool print_utt = false;
+        bool write_raw = false;
+        bool write_durlabel = false;
 
-    CFSAString LexFileName, LexDFileName;
-    HTS_Engine engine;
-    double speed = 1.1;
-    size_t fr = 48000;
-    size_t fp = 240;
-    float alpha = 0.55;
-    float beta = 0.0;
-    float ht = 2.0;
-    float th = 0.5;
-    float gvw1 = 1.0;
-    float gvw2 = 1.2;
+        CFSString LexFileName, LexDFileName;
+        HTS_Engine engine;
+        double speed = 1.1;
+        size_t fr = 48000;
+        size_t fp = 240;
+        float alpha = 0.55;
+        float beta = 0.0;
+        float ht = 2.0;
+        float th = 0.5;
+        float gvw1 = 1.0;
+        float gvw2 = 1.2;
 
-    FSCInit();
-    fn_voices = (char **) malloc(argc * sizeof (char *));
-    
-    if (argc < 11) {
-        fprintf(stderr, "Viga: liiga vähe parameetreid\n\n");
-        PrintUsage();
-    }    
+        FSCInit();
+        fn_voices = (char**)malloc(argc * sizeof(char*));
 
-    for (int i = 0; i < argc; i++) {
-        if (CFSAString("-lex") == argv[i]) {
-            if (i + 1 < argc) {
-                LexFileName = argv[++i];
-            } else {
-                return PrintUsage();
+        if (argc < 11) {
+            fprintf(stderr, "Viga: liiga vähe parameetreid\n\n");
+            PrintUsage();
+        }
+
+        for (int i = 0; i < argc; i++) {
+            if (CFSAString("-lex") == argv[i]) {
+                if (i + 1 < argc) {
+                    char* inV = argv[i + 1];
+                    wchar_t* temp = new wchar_t[strlen(inV) + 1];
+                    mbstowcs_s(NULL, temp, strlen(inV) + 1, inV, strlen(inV));
+                    LexFileName = temp;
+                }
+                else {
+                    return PrintUsage();
+                }
             }
-        }
-        if (CFSAString("-lexd") == argv[i]) {
-            if (i + 1 < argc) {
-                LexDFileName = argv[++i];
-            } else {
-                return PrintUsage();
+            if (CFSAString("-lexd") == argv[i]) {
+                if (i + 1 < argc) {
+                    char* inV = argv[i + 1];
+                    wchar_t* temp = new wchar_t[strlen(inV) + 1];
+                    mbstowcs_s(NULL, temp, strlen(inV) + 1, inV, strlen(inV));
+                    LexDFileName = temp;
+                }
+                else {
+                    return PrintUsage();
+                }
             }
-        }
-        if (CFSAString("-m") == argv[i]) {
-            if (i + 1 < argc) {
-                fn_voices[0] = argv[i + 1];
-            } else {
-                fprintf(stderr, "Viga: puudub *.htsvoice fail\n");
-                PrintUsage();
-                exit(0);
+            if (CFSAString("-m") == argv[i]) {
+                if (i + 1 < argc) {
+                    fn_voices[0] = argv[i + 1];
+                }
+                else {
+                    fprintf(stderr, "Viga: puudub *.htsvoice fail\n");
+                    PrintUsage();
+                    exit(0);
+                }
             }
-        }
-        if (CFSAString("-o") == argv[i]) {
-            if (i + 1 < argc) {
-                output_fname = argv[i + 1];
-                cfileexists(output_fname);
-            } else {
-                fprintf(stderr, "Viga: puudb väljundfaili nimi\n");
-                PrintUsage();
-                exit(0);
+            if (CFSAString("-o") == argv[i]) {
+                if (i + 1 < argc) {
+                    output_fname = argv[i + 1];
+                    cfileexists(output_fname);
+                }
+                else {
+                    fprintf(stderr, "Viga: puudb väljundfaili nimi\n");
+                    PrintUsage();
+                    exit(0);
+                }
             }
-        }
-        if (CFSAString("-f") == argv[i]) {
-            if (i + 1 < argc) {
-                in_fname = argv[i + 1];
-            } else {
-                fprintf(stderr, "Viga: puudb sisendfaili nimi\n");
-                PrintUsage();
-                exit(0);
+            if (CFSAString("-f") == argv[i]) {
+                if (i + 1 < argc) {
+                    in_fname = argv[i + 1];
+                }
+                else {
+                    fprintf(stderr, "Viga: puudb sisendfaili nimi\n");
+                    PrintUsage();
+                    exit(0);
+                }
             }
-        }
-        if (CFSAString("-s") == argv[i]) {
-            if (i + 1 < argc) {
-                samplerate(fr, fp, alpha, atoi(argv[i + 1]));
+            if (CFSAString("-s") == argv[i]) {
+                if (i + 1 < argc) {
+                    samplerate(fr, fp, alpha, atoi(argv[i + 1]));
+                }
             }
-        }
-        if (CFSAString("-r") == argv[i]) {
-            if (i + 1 < argc) {
-                speed = atof(argv[i + 1]);
+            if (CFSAString("-r") == argv[i]) {
+                if (i + 1 < argc) {
+                    speed = atof(argv[i + 1]);
+                }
             }
-        }
-        if (CFSAString("-ht") == argv[i]) {
-            if (i + 1 < argc) {
-                ht = atof(argv[i + 1]);
+            if (CFSAString("-ht") == argv[i]) {
+                if (i + 1 < argc) {
+                    ht = atof(argv[i + 1]);
+                }
             }
-        }
-        if (CFSAString("-gvw1") == argv[i]) {
-            if (i + 1 < argc) {
-                gvw1 = atof(argv[i + 1]);
+            if (CFSAString("-gvw1") == argv[i]) {
+                if (i + 1 < argc) {
+                    gvw1 = atof(argv[i + 1]);
+                }
             }
-        }
-        if (CFSAString("-gvw2") == argv[i]) {
-            if (i + 1 < argc) {
-                gvw2 = atof(argv[i + 1]);
+            if (CFSAString("-gvw2") == argv[i]) {
+                if (i + 1 < argc) {
+                    gvw2 = atof(argv[i + 1]);
+                }
             }
-        }        
-        if (CFSAString("-debug") == argv[i]) {
-            print_label = true;
-        }
-        if (CFSAString("-utt") == argv[i]) {
-            print_utt = true;
-        }        
-        if (CFSAString("-raw") == argv[i]) {
-            write_raw = true;
-        }
-        if (CFSAString("-dur") == argv[i]) {
-            if (i + 1 < argc) {
-                dur_fname = argv[i + 1];
-                cfileexists(dur_fname);
-                write_durlabel = true;                
-            } else {
-                fprintf(stderr, "Viga: puudb kestustefaili nimi\n");
-                PrintUsage();
-                exit(0);
+            if (CFSAString("-debug") == argv[i]) {
+                print_label = true;
             }
+            if (CFSAString("-utt") == argv[i]) {
+                print_utt = true;
+            }
+            if (CFSAString("-raw") == argv[i]) {
+                write_raw = true;
+            }
+            if (CFSAString("-dur") == argv[i]) {
+                if (i + 1 < argc) {
+                    dur_fname = argv[i + 1];
+                    cfileexists(dur_fname);
+                    write_durlabel = true;
+                }
+                else {
+                    fprintf(stderr, "Viga: puudb kestustefaili nimi\n");
+                    PrintUsage();
+                    exit(0);
+                }
+            }
+
+
         }
 
-        
-    }
+        Linguistic.Open(LexFileName);
+        Disambiguator.Open(LexDFileName);
 
-    Linguistic.Open(LexFileName);
-    Disambiguator.Open(LexDFileName);
+        CFSWString text;
+        ReadUTF8Text(text, in_fname);
+        HTS_Engine_initialize(&engine);
 
-    CFSWString text;
-    ReadUTF8Text(text, in_fname);
-    HTS_Engine_initialize(&engine);
-
-    if (HTS_Engine_load(&engine, fn_voices, 1) != TRUE) {
-        fprintf(stderr, "Viga: puudub *.htsvoice. %p\n", fn_voices[0]);
-        free(fn_voices);
-        HTS_Engine_clear(&engine);
-        exit(1);
-    }
-    free(fn_voices);
-
-    HTS_Engine_set_sampling_frequency(&engine, (size_t) fr);
-    HTS_Engine_set_phoneme_alignment_flag(&engine, FALSE);
-    HTS_Engine_set_fperiod(&engine, (size_t) fp);
-    HTS_Engine_set_alpha(&engine, alpha);
-    HTS_Engine_set_beta(&engine, beta);
-    HTS_Engine_set_speed(&engine, speed);
-    HTS_Engine_add_half_tone(&engine, ht);
-    HTS_Engine_set_msd_threshold(&engine, 1, th);
-    /*
-    HTS_Engine_set_duration_interpolation_weight(&engine, 1, diw);
-    HTS_Engine_set_parameter_interpolation_weight(&engine, 0, 0, piw1);
-    HTS_Engine_set_parameter_interpolation_weight(&engine, 0, 1, piw2);
-    HTS_Engine_set_gv_interpolation_weight(&engine, 0, 0, giw1);
-    HTS_Engine_set_gv_interpolation_weight(&engine, 0, 1, giw2);
-     */
-    HTS_Engine_set_gv_weight(&engine, 0, gvw1);
-    HTS_Engine_set_gv_weight(&engine, 1, gvw2);
-
-    text = DealWithText(text);
-    CFSArray<CFSWString> res = do_utterances(text);
-
-    INTPTR data_size = 0;
-    outfp = fopen(output_fname, "wb");
-    if (write_durlabel) durfp = fopen(dur_fname, "w");
-    if (!write_raw) HTS_Engine_write_header(&engine, outfp, 1);
-    for (INTPTR i = 0; i < res.GetSize(); i++) {
-
-        CFSArray<CFSWString> label = do_all(res[i], print_label, print_utt);
-
-        std::vector<std::string> v;
-        v = to_vector(label);
-
-        std::vector<char*> vc;
-        fill_char_vector(v, vc);
-
-        size_t n_lines = vc.size();
-
-        if (HTS_Engine_synthesize_from_strings(&engine, &vc[0], n_lines) != TRUE) {
-            fprintf(stderr, "Viga: süntees ebaonnestus.\n");            
+        if (HTS_Engine_load(&engine, fn_voices, 1) != TRUE) {
+            fprintf(stderr, "Viga: puudub *.htsvoice. %p\n", fn_voices[0]);
+            free(fn_voices);
             HTS_Engine_clear(&engine);
             exit(1);
         }
+        free(fn_voices);
 
-        clean_char_vector(vc);
-        data_size += HTS_Engine_engine_speech_size(&engine);
-        if (write_durlabel) HTS_Engine_save_durlabel(&engine, durfp);
-        HTS_Engine_save_generated_speech(&engine, outfp);
+        HTS_Engine_set_sampling_frequency(&engine, (size_t)fr);
+        HTS_Engine_set_phoneme_alignment_flag(&engine, FALSE);
+        HTS_Engine_set_fperiod(&engine, (size_t)fp);
+        HTS_Engine_set_alpha(&engine, alpha);
+        HTS_Engine_set_beta(&engine, beta);
+        HTS_Engine_set_speed(&engine, speed);
+        HTS_Engine_add_half_tone(&engine, ht);
+        HTS_Engine_set_msd_threshold(&engine, 1, th);
+        /*
+        HTS_Engine_set_duration_interpolation_weight(&engine, 1, diw);
+        HTS_Engine_set_parameter_interpolation_weight(&engine, 0, 0, piw1);
+        HTS_Engine_set_parameter_interpolation_weight(&engine, 0, 1, piw2);
+        HTS_Engine_set_gv_interpolation_weight(&engine, 0, 0, giw1);
+        HTS_Engine_set_gv_interpolation_weight(&engine, 0, 1, giw2);
+         */
+        HTS_Engine_set_gv_weight(&engine, 0, gvw1);
+        HTS_Engine_set_gv_weight(&engine, 1, gvw2);
 
-        HTS_Engine_refresh(&engine);
+        text = DealWithText(text);
+        CFSArray<CFSWString> res = do_utterances(text);
 
-    } //synth loop
-    
-    if (!write_raw) HTS_Engine_write_header(&engine, outfp, data_size);
-    if (write_durlabel) fclose(durfp);
-    fclose(outfp);
+        INTPTR data_size = 0;
+        outfp = fopen(output_fname, "wb");
+        if (write_durlabel) durfp = fopen(dur_fname, "w");
+        if (!write_raw) HTS_Engine_write_header(&engine, outfp, 1);
+        for (INTPTR i = 0; i < res.GetSize(); i++) {
 
-    HTS_Engine_clear(&engine);
-    Linguistic.Close();
+            CFSArray<CFSWString> label = do_all(res[i], print_label, print_utt);
 
-    FSCTerminate();
-    return 0;
+            std::vector<std::string> v;
+            v = to_vector(label);
 
+            std::vector<char*> vc;
+            fill_char_vector(v, vc);
+
+            size_t n_lines = vc.size();
+
+            if (HTS_Engine_synthesize_from_strings(&engine, &vc[0], n_lines) != TRUE) {
+                fprintf(stderr, "Viga: süntees ebaonnestus.\n");
+                HTS_Engine_clear(&engine);
+                exit(1);
+            }
+
+            clean_char_vector(vc);
+            data_size += HTS_Engine_engine_speech_size(&engine);
+            if (write_durlabel) HTS_Engine_save_durlabel(&engine, durfp);
+            HTS_Engine_save_generated_speech(&engine, outfp);
+
+            HTS_Engine_refresh(&engine);
+
+        } //synth loop
+
+        if (!write_raw) HTS_Engine_write_header(&engine, outfp, data_size);
+        if (write_durlabel) fclose(durfp);
+        fclose(outfp);
+
+        HTS_Engine_clear(&engine);
+        Linguistic.Close();
+
+        FSCTerminate();
+        return 0;
+    }
 }
 
 

@@ -3,7 +3,7 @@
 #include <math.h>               /* for pow() */
 
 /* hts_engine libraries */
-#include "HTS_engine.h"
+#include "../../include/HTS_engine.h"
 #include "HTS_hidden.h"
 
 void HTS_Engine_save_durlabel(HTS_Engine * engine, FILE * fp)
@@ -32,7 +32,9 @@ void HTS_Engine_save_durlabel(HTS_Engine * engine, FILE * fp)
       found = strstr( source, "+" );
       end = found - source;
       pikkus = (end - start) - 1;
-      char substr[pikkus];
+      char* substr = malloc(pikkus * sizeof(char));
+
+      if (substr == NULL) { exit(1); }
 
       memcpy( substr, &source[start+1], pikkus );
       substr[pikkus] = '\0';

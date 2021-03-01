@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="synthts_et\bin\synthts_et.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_audio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_engine.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_engine_patches.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_gstream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_label.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_model.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_pstream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_sstream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\engine\HTS_vocoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\adhoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arva_av.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvahy1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvalyh1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvalyh2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvamitte.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvans1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvans2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvapn1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvapn2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvash1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvasuf1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvavi1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\arvax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\bins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\bsearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkgeon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkhy1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkhy2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chklyh0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chklyh1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chklyh2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chklyh3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chklyh4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkmin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkmitte.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chknr2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkoleta.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkvaljend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\chkx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\close_d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\cmorf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\cxxcash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\cxxraam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\cyybs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\disambiguator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\echopath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\et3myh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\etmrfa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\etmrfverstr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\find_fd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\hjk_cxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kchk1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kchk2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kchk4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kchk5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kchk6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kchk30.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kchk33.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kjuhtum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\komp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\kr6nksud1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\linguistic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\loefailist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\mittesona.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\mrf2yh2mrf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\mrf-gen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\open_d1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\open_d2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\open_dm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\ptword.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readeel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readends.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readfgrs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readfms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readgrs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readloe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readprf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\readsuf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\rfi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\rooma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\silp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\sloendid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\sobivus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\strcnv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\strtosi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\suggestor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\tloendid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\tmk2t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\tmk2tx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\ty_lp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\etana\valjatr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fscinit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsdll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsexception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsfixalloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fshugeinteger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fslist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsmemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsreg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fstime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fstrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fsvar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\fsc\fswav.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\label\label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\label\mklab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\label\number.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\label\syls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\label\util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synthts_et\lib\label\word.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="synthts_et\include\HTS_engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\include\mklab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\engine\HTS_hidden.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\adhoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\ahel2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\arva.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\cmorf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\ctulem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\cxxbs3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\cxxcash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\dctmetainf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\disambiguator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\etmrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\etmrfana.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\etmrfverstr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\etmrfyhh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\f-info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\fsxstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\ini_mrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\kr6nksud.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\lib_amor32_macprefix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\linguistic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\loefailist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\mittesona.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\morphinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\mrf2yh2mrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\mrflags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\mrf-mrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\pfscodepage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\post-fsc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\proof.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\pttype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\ptword.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\result.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\rooma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\s6n0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\silp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\sloendid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\sonatk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\suggestor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\suurused.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\t3common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\t3lex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tloendid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tmk2t.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tmk2tx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tmplarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tmplptrarrayblabla.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tmplptrsrtfnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tulem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\tyybid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\etana\viga.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsblockalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fscinit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsdll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsexception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsfixalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fshugeinteger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fslist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsmemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsreg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fssmartptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsstring2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fstime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fstrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fstype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fsvar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\fswav.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\fsc\stdfsc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\label\label.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\label\number.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\label\syls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\label\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synthts_et\lib\label\word.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

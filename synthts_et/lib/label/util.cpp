@@ -84,7 +84,7 @@ bool is_dash (CFSWString c) {
 }
 
 bool is_hyphen (CFSWString c) {
-	if (c.FindOneOf(L"-") > -1)	return true;
+	if (c.FindOneOf(L"-­") > -1)	return true;
 		return false;
 }
 

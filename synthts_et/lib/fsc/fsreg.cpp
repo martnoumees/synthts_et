@@ -8,7 +8,7 @@
 int CFSReg::Split(const CFSString &szPath, HKEY *hRoot, CFSString *pszFolder, CFSString *pszFile)
 {
 	static struct _Roots{
-		TCHAR *Name;
+		TCHAR const*Name;
 		HKEY hKey;
 	}const Roots[]={
 		{FSTSTR("HKEY_CLASSES_ROOT\\"), HKEY_CLASSES_ROOT},

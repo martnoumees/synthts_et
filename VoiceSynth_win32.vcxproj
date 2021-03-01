@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{401dcff1-2138-4de4-aa68-e0f9637b256d}</ProjectGuid>
+    <RootNamespace>VoiceSynthwin32</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)obj\</ObjectFileName>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)obj\</ObjectFileName>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="synthts_et\bin\synthts_et.cpp" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_audio.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_engine.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_engine_patches.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_gstream.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_label.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_misc.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_model.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_pstream.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_sstream.c" />
+    <ClCompile Include="synthts_et\lib\engine\HTS_vocoder.c" />
+    <ClCompile Include="synthts_et\lib\etana\adhoc.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvahy1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvai.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvalyh1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvalyh2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvamitte.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvans1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvans2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvapn1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvapn2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvash1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvasuf1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvavi1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arvax.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\arva_av.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\bins.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\bsearch.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkgeon.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkhy1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkhy2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chklyh0.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chklyh1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chklyh2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chklyh3.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chklyh4.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkmin.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkmitte.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chknr2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkoleta.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkvaljend.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\chkx.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\close_d.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\cmorf.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\cxxcash.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\cxxraam.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\cyybs.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\disambiguator.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\echopath.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\et3myh.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\etmrfa.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\etmrfverstr.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\find_fd.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\hjk_cxx.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kchk1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kchk2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kchk30.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kchk33.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kchk4.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kchk5.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kchk6.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kjuhtum.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\komp.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\kr6nksud1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\linguistic.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\loefailist.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\mittesona.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\mrf-gen.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\mrf2yh2mrf.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\open_d1.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\open_d2.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\open_dm.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\ptword.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readeel.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readends.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readfgrs.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readfms.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readgrs.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readloe.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readprf.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\readsuf.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\rfi.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\rooma.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\silp.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\sloendid.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\sobivus.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\strcnv.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\strtosi.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\suggestor.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\tloendid.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\tmk2t.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\tmk2tx.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\ty_lp.cpp" />
+    <ClCompile Include="synthts_et\lib\etana\valjatr.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fscinit.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsdata.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsdll.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsexception.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsfile.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsfixalloc.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fshugeinteger.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fslist.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsmemory.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsreg.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsstring.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsthread.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fstime.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fstrace.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fsvar.cpp" />
+    <ClCompile Include="synthts_et\lib\fsc\fswav.cpp" />
+    <ClCompile Include="synthts_et\lib\label\label.cpp" />
+    <ClCompile Include="synthts_et\lib\label\mklab.cpp" />
+    <ClCompile Include="synthts_et\lib\label\number.cpp" />
+    <ClCompile Include="synthts_et\lib\label\syls.cpp" />
+    <ClCompile Include="synthts_et\lib\label\util.cpp" />
+    <ClCompile Include="synthts_et\lib\label\word.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="synthts_et\include\HTS_engine.h" />
+    <ClInclude Include="synthts_et\include\mklab.h" />
+    <ClInclude Include="synthts_et\lib\engine\HTS_hidden.h" />
+    <ClInclude Include="synthts_et\lib\etana\adhoc.h" />
+    <ClInclude Include="synthts_et\lib\etana\ahel2.h" />
+    <ClInclude Include="synthts_et\lib\etana\arva.h" />
+    <ClInclude Include="synthts_et\lib\etana\cmorf.h" />
+    <ClInclude Include="synthts_et\lib\etana\ctulem.h" />
+    <ClInclude Include="synthts_et\lib\etana\cxxbs3.h" />
+    <ClInclude Include="synthts_et\lib\etana\cxxcash.h" />
+    <ClInclude Include="synthts_et\lib\etana\dctmetainf.h" />
+    <ClInclude Include="synthts_et\lib\etana\disambiguator.h" />
+    <ClInclude Include="synthts_et\lib\etana\etmrf.h" />
+    <ClInclude Include="synthts_et\lib\etana\etmrfana.h" />
+    <ClInclude Include="synthts_et\lib\etana\etmrfverstr.h" />
+    <ClInclude Include="synthts_et\lib\etana\etmrfyhh.h" />
+    <ClInclude Include="synthts_et\lib\etana\f-info.h" />
+    <ClInclude Include="synthts_et\lib\etana\fsxstring.h" />
+    <ClInclude Include="synthts_et\lib\etana\ini_mrf.h" />
+    <ClInclude Include="synthts_et\lib\etana\kr6nksud.h" />
+    <ClInclude Include="synthts_et\lib\etana\lib_amor32_macprefix.h" />
+    <ClInclude Include="synthts_et\lib\etana\linguistic.h" />
+    <ClInclude Include="synthts_et\lib\etana\loefailist.h" />
+    <ClInclude Include="synthts_et\lib\etana\mittesona.h" />
+    <ClInclude Include="synthts_et\lib\etana\morphinfo.h" />
+    <ClInclude Include="synthts_et\lib\etana\mrf-mrf.h" />
+    <ClInclude Include="synthts_et\lib\etana\mrf2yh2mrf.h" />
+    <ClInclude Include="synthts_et\lib\etana\mrflags.h" />
+    <ClInclude Include="synthts_et\lib\etana\pfscodepage.h" />
+    <ClInclude Include="synthts_et\lib\etana\post-fsc.h" />
+    <ClInclude Include="synthts_et\lib\etana\proof.h" />
+    <ClInclude Include="synthts_et\lib\etana\pttype.h" />
+    <ClInclude Include="synthts_et\lib\etana\ptword.h" />
+    <ClInclude Include="synthts_et\lib\etana\result.h" />
+    <ClInclude Include="synthts_et\lib\etana\rooma.h" />
+    <ClInclude Include="synthts_et\lib\etana\s6n0.h" />
+    <ClInclude Include="synthts_et\lib\etana\silp.h" />
+    <ClInclude Include="synthts_et\lib\etana\sloendid.h" />
+    <ClInclude Include="synthts_et\lib\etana\sonatk.h" />
+    <ClInclude Include="synthts_et\lib\etana\suggestor.h" />
+    <ClInclude Include="synthts_et\lib\etana\suurused.h" />
+    <ClInclude Include="synthts_et\lib\etana\t3common.h" />
+    <ClInclude Include="synthts_et\lib\etana\t3lex.h" />
+    <ClInclude Include="synthts_et\lib\etana\tloendid.h" />
+    <ClInclude Include="synthts_et\lib\etana\tmk2t.h" />
+    <ClInclude Include="synthts_et\lib\etana\tmk2tx.h" />
+    <ClInclude Include="synthts_et\lib\etana\tmplarray.h" />
+    <ClInclude Include="synthts_et\lib\etana\tmplptrarrayblabla.h" />
+    <ClInclude Include="synthts_et\lib\etana\tmplptrsrtfnd.h" />
+    <ClInclude Include="synthts_et\lib\etana\tulem.h" />
+    <ClInclude Include="synthts_et\lib\etana\tyybid.h" />
+    <ClInclude Include="synthts_et\lib\etana\viga.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsblockalloc.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsc.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fscinit.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsdata.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsdll.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsexception.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsfile.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsfixalloc.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fshugeinteger.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fslist.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsmemory.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsreg.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fssmartptr.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsstream.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsstring.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsstring2.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsthread.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fstime.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fstrace.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fstype.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsutil.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fsvar.h" />
+    <ClInclude Include="synthts_et\lib\fsc\fswav.h" />
+    <ClInclude Include="synthts_et\lib\fsc\stdfsc.h" />
+    <ClInclude Include="synthts_et\lib\label\label.h" />
+    <ClInclude Include="synthts_et\lib\label\number.h" />
+    <ClInclude Include="synthts_et\lib\label\syls.h" />
+    <ClInclude Include="synthts_et\lib\label\util.h" />
+    <ClInclude Include="synthts_et\lib\label\word.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
