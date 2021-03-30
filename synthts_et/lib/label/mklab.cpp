@@ -260,42 +260,7 @@ CMorphInfo DisambiguateSynthesisResult(CFSArray<CMorphInfo> MIs, CPTWord s) {
 }
 
 void do_phones(syl_struct &ss) {
-	//static const CFSWString rareph = L"jvfdbh"; // harvad või puuduvad foneemid kõnkorpuses
- //   CFSArray<phone_struct> pv;
- //   phone_struct p;
- //   p.utt_p = 0;
- //   p.phr_p = 0;
- //   p.word_p = 0;
- //   p.syl_p = 0;
- //   INTPTR phone_syl_p = 1;
- //   for (INTPTR i = 0; i < ss.syl.GetLength(); i++) {
- //       CFSWString c = ss.syl.GetAt(i);
- //       if ((c == L'š') || (c == L'ž')) c = L"sh";
- //       if (c == L'õ') c = L"q";
- //       if (c == L'ä') c = L"x";
- //       if (c == L'ö') c = L"c";
- //       if (c == L'ü') c = L"y";
-
- //       if (is_colon(c)) {
- //           // 1. nihutusvigade kaitseks (vt "piirkonda")
- //           // 2-3. kolmandas vältes v ja j on kõnebaasis sedavõrd haruldased,
- //           // et väljundis kuuleb nende asemel mingit r-i laadset hääikut.
- //           // Kellel on parem baas, kommenteerigu 2. ja 3. tingimus välja.            
-	////if ((i > 0) && (pv[pv.GetSize() - 1].phone != L"j") && (pv[pv.GetSize() - 1].phone != L"v"))
-	//	CFSWString phone = pv[pv.GetSize() - 1].phone;
-	//	if (phone.GetLength() != 1 || rareph.Find(phone[0]) == -1){ 
- //               	pv[pv.GetSize() - 1].phone += doq;
-	//	}
-	//}
- //       else {
- //       	p.phone = c;
- //       	p.syl_p = phone_syl_p++;
- //       	pv.AddItem(p);
- //       }
-
- //   }
- //   ss.phone_vector = pv;
-        CFSArray<phone_struct> pv;
+    CFSArray<phone_struct> pv;
     phone_struct p;
     p.utt_p = 0;
     p.phr_p = 0;
